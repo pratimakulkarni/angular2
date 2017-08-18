@@ -1,0 +1,40 @@
+<html>
+    <head><title>Form Page</title></head>
+    <body>
+        <form #form="ngForm" (submit)="onsubmit(form.value,$event)">
+      <div>
+        <label>Firstname:</label>
+        <input type="text" name="firstname" ngModel>
+      </div>
+      <div>
+        <label>Lastname:</label>
+        <input type="text" name="lastname" ngModel>
+      </div>
+      <div>
+        <label>Street:</label>
+        <input type="text" name="street" ngModel>
+      </div>
+      <div>
+        <label>Zip:</label>
+        <input type="text" name="zip" ngModel>
+      </div>
+      <div>
+        <label>City:</label>
+        <input type="text" name="city" ngModel>
+      </div>
+    
+      <button type="submit">Submit</button>
+    </form>
+    <button type="button" (click)="redirect()">Nested Forms </button>
+     <!-- <a [routerLink]="['/formExample']">Nested Form </a>  -->
+     <div>
+        <header>
+        
+        </header>
+             <router-outlet></router-outlet>
+        <footer>
+
+        </footer>
+     </div> 
+    </body>
+</html>
